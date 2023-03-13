@@ -10,6 +10,8 @@
   - 3ª Geração: Circuitos Integrados
   - 4ª Geração: Microprocessadores
   
+---
+
 ### Módulo 2 Sistema Computacional
 - Hardware: Componentes físicos
   - Processador (CPU)
@@ -27,6 +29,8 @@
   - Drivers dos componentes físicos
   - Sistema operacional
 
+---
+
 ### Módulo 3 Sistema Operacional (OS)
 #### Funções do OS
 - Camada de abstração entre o hardware e as aplicações do usuário,
@@ -43,6 +47,8 @@ para que os demais programas não precisem conhecer sobre o hardware
 - Anos 80 - MS-DOS nos computadores pessoais da IBM
 - Anos 90 - Consolidação do Windows e Apple
 - Século XX - OS para dispositivos móveis
+
+---
 
 ### Módulo 4 - Comunicação em Rede
 #### Origem da Internet
@@ -99,6 +105,20 @@ para que os demais programas não precisem conhecer sobre o hardware
 - Um conjunto de instruções são todas as possíveis instruções que podem ser interpretadas e executadas por um processador específico
 - Um ciclo de instruções é um conjunto de instruções de máquina sequencialmente ordenadas para a execução de um programa
 
+---
+
 ### Módulo 2 Subsistemas de processamento, memória e entrada e saída
 #### Subsistemas de processamento
-```TODO```
+
+Há duas funções principais para o CPU:
+- Processamento dos dados
+- Controle, composta por:
+  - busca da instrução,
+  - interpretação das ações, e
+  - geração dos sinais para ativação das atividades requeridas (dentro ou fora do processador)
+
+#### Memória 
+- A memória é responsável por armazenar e recuperar valores.
+- Há diferentes tipos de memórias, usadas conforme o uso requerido seguindo uma hierarquia
+
+
