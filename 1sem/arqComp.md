@@ -120,5 +120,42 @@ Há duas funções principais para o CPU:
 #### Memória 
 - A memória é responsável por armazenar e recuperar valores.
 - Há diferentes tipos de memórias, usadas conforme o uso requerido seguindo uma hierarquia
+![Hierarquia de memórias](https://user-images.githubusercontent.com/2355303/224823454-fe690d26-93e5-4bbc-bbd2-772752ea4790.png)
+  - **Registradores**: Estão no topo da hierarquia de memória
+    | Tipo de registrador | Descrição        |
+    | ------------------- | ---------------- |
+    | de Dados | Armazena dados usados pelas unidades de cálculo, separados em número inteiros e ponto flutuante |
+    | de Dados de Memória (RDM/MBR) | Transferência externa de dados |
+    | de Endereços de Memória (REM/MAR) | Transferência externa de endereços de memória |
+    | Contador de instrução/programa (CI/PC) | Busca da próxima instrução |
+    | Registrador de instrução (RI/IR) | Armazena instrução |
+    | Segmentos | Apontam para determinados segmentos: programa, dados, pilha, etc. |
+    | Flags | Indica o resultado de certas instruções |
+  - **Cache**: Memória de pequena capacidade entre a memória principal e o processador, para dados usados no momento, transferidos para o CPU em alta velocidade
+
+```
+Principio da localidade
+  - Espacial: Sempre que o processador realiza um acesso a um endereço, espera-se que o próximo acesso seja no endereço contíguo seguinte
+  - Temporal: Espera-se que, quando houver um acesso a um endereço, o próximo seja acessado em um curto espaço de tempo
+```
+
+  - **Memória principal**: Memória básica no qual o programa executado e seus dados são armazenados para que o processado busque as instruções
+    - Antigamente, usavem método de acesso sequencial, com endereços relativos ao endereço inicial (p.ex. VHS e fitas magnéticas)
+    - Posteriormente, passou-se a usar memórias de acesso aleatório (RAM)
+    - Memória RAM: usada para escrita ou leitura
+    - Organizada em N partes iguais, cada uma com M bits (usualmente M = 1 byte = 8 bits)
+    - Cada uma das partes é uma palavra, célula, linha ou setor e é referênciada por um número único chamado endereço.
+    - Cada endereço possui a mesma largura E de bits, sendo `2^E >= N`
+    - As memórias RAM podem ser:
+      - estáticas (SRAM): cada bit com 5 a 7 transistores, sem recarregamento, mais rápidas, requer mais espaço e maior custo, usadas como cache
+      - dinâmicas (DRAM): cada bit constituído por um capacitor para o valor do bit e 1 transistor para a leitura/escrita, precisa recarregar capacitor periodicamente (refresh), o que gasta tempo. Usadas como memória principal
+    - As memórias DRAM podem ser síncronas ou assíncronas, conforme sua sincronização com o processador
+    - O encapsulamento das memórias pode ser:
+      - SIMM (Single In Line Memory Module): Contatos elétricos iguals em ambos os lados
+      - DIMM (Dual In Line Memory Module): Contatos independentes
+  
+  - **Memória Secundária**: Usada para armazenamento persistente
+
+#### Subsistemas de entrada e saída
 
 
